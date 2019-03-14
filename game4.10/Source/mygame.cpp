@@ -89,7 +89,7 @@ CGameMap::CGameMap() : X(20), Y(40), MW(120), MH(100) //给予地图左上角坐标以及每
 void CGameMap::LoadBitmap()
 {
     blue.LoadBitmap(IDB_B);
-    green.LoadBitmap(IDB_G);
+    green.LoadBitmap(IDB_R);
 }
 
 void CGameMap::OnShow()
@@ -201,7 +201,7 @@ void CPractice::OnMove()
 }
 void CPractice::LoadBitmap()
 {
-    pic.LoadBitmap(IDB_FISHMAN);
+    pic.LoadBitmap(IDB_PORING);
 }
 void CPractice::OnShow()
 {
@@ -227,7 +227,7 @@ void CGameStateInit::OnInit()
     //
     // 開始載入資料
     //
-    logo.LoadBitmap(IDB_BACKGROUND);
+    logo.LoadBitmap(IDB_BIGDOG);
     Sleep(300);				/// 放慢，以便看清楚進度，實際遊戲請刪除此Sleep
     //
     // 此OnInit動作會接到CGameStaterRun::OnInit()，所以進度還沒到100%
@@ -499,8 +499,8 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 	gamemap.LoadBitmap();       //载入地图
     c_practice.LoadBitmap();
-    practice.LoadBitmapA(IDB_FISHMAN);
-    practiceBlue.LoadBitmapA(IDB_BLUE, RGB(255, 255, 255));
+    practice.LoadBitmapA(IDB_PORING);
+    practiceBlue.LoadBitmapA(IDB_R, RGB(255, 255, 255));
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
